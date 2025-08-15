@@ -1,0 +1,4 @@
+.site-footer { border-top: 1px solid #e5e7eb; background: #fff; }
+.site-footer__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; padding: 1rem 0; }
+.site-footer__nav { display: inline-flex; gap: 1rem; }
+.site-footer__link { color: var(--color-muted); }

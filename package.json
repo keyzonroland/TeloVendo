@@ -1,0 +1,13 @@
+{
+  "name": "telo-vendo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sitio estático Te lo Vendo con SCSS (7-1)",
+  "scripts": {
+    "sass:build": "sass scss/main.scss assets/css/styles.css --style=compressed",
+    "sass:watch": "sass --watch scss/main.scss:assets/css/styles.css --style=expanded"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

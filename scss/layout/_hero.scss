@@ -1,0 +1,6 @@
+.hero { background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%); border-bottom: 1px solid #e5e7eb;
+  &__inner { display: grid; gap: 2rem; grid-template-columns: 1.1fr .9fr; align-items: center; padding: 2rem 0; }
+  &__title { font-size: clamp(1.5rem, 3vw + .5rem, 2.5rem); }
+  &__subtitle { color: var(--color-muted); }
+  &__actions { display: flex; gap: .75rem; margin-top: 1rem; }
+}

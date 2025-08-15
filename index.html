@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Te lo Vendo — Inicio</title>
+    <meta name="description" content="Te lo Vendo: novedades y destacados de nuestra tienda en línea." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body class="page page--home">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" role="banner">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html" aria-label="Te lo Vendo, inicio">
+          <img class="brand__logo" src="./assets/img/logo.svg" alt="Logo Te lo Vendo" width="40" height="40" />
+          <span class="brand__name">Te lo Vendo</span>
+        </a>
+
+        <button class="nav__toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Mostrar u ocultar menú">
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" role="navigation" aria-label="Principal">
+          <ul id="site-menu" class="nav__list">
+            <li class="nav__item"><a class="nav__link nav__link--active" href="index.html">Inicio</a></li>
+            <li class="nav__item"><a class="nav__link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav__item"><a class="nav__link" href="acerca.html">Acerca</a></li>
+            <li class="nav__item"><a class="nav__link" href="styleguide.html">Guía de estilos</a></li>
+            <li class="nav__item"><a class="nav__link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="site-main" role="main">
+      <section class="hero" aria-label="Presentación">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <h1 class="hero__title">Bienvenido a Te lo Vendo</h1>
+            <p class="hero__subtitle">Tu tienda en línea con las mejores novedades. Un punto de entrada para nuestro sistema de información en construcción.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="catalogo.html">Explorar catálogo</a>
+              <a class="btn btn--ghost" href="acerca.html">Conocer el proyecto</a>
+            </div>
+          </div>
+          <div class="hero__media">
+            <img src="./assets/img/hero.svg" alt="Ilustración de compras en línea" width="480" height="320" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Novedades">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Novedades</h2>
+            <p class="section__subtitle">Últimos productos añadidos a nuestra biblioteca/tienda.</p>
+          </header>
+          <div id="grid-novedades" class="grid grid--cards" aria-live="polite"></div>
+          <div class="section__actions">
+            <a class="btn btn--secondary" href="catalogo.html">Ver más</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" aria-label="Categorías destacadas">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Categorías</h2>
+          </header>
+          <div id="grid-categorias" class="grid grid--equal"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">© <span id="year"></span> Te lo Vendo. Todos los derechos reservados.</p>
+        <nav class="site-footer__nav" aria-label="Secundario">
+          <a class="site-footer__link" href="acerca.html">Acerca</a>
+          <a class="site-footer__link" href="styleguide.html">Guía de estilos</a>
+        </nav>
+      </div>
+    </footer>
+
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/home.js"></script>
+  </body>
+</html>

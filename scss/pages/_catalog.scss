@@ -1,0 +1,4 @@
+.catalog-filters { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1rem;
+  &__group { display: grid; gap: .25rem; }
+  &__label { font-weight: 600; }
+}

@@ -1,0 +1,4 @@
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip { display: inline-flex; align-items: center; gap: .25rem; padding: .4rem .6rem; border: 1px solid #e5e7eb; border-radius: 999px; background: #fff; font-size: .9rem;
+  &--active { background: #e0f2fe; border-color: #bae6fd; }
+}

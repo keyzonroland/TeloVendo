@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Te lo Vendo — Guía de estilos</title>
+    <meta name="description" content="Guía visual con tipografías, colores y componentes" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body class="page page--styleguide">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" role="banner">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">
+          <img class="brand__logo" src="./assets/img/logo.svg" alt="Logo Te lo Vendo" width="40" height="40" />
+          <span class="brand__name">Te lo Vendo</span>
+        </a>
+        <button class="nav__toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Mostrar u ocultar menú">
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav" role="navigation" aria-label="Principal">
+          <ul id="site-menu" class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="index.html">Inicio</a></li>
+            <li class="nav__item"><a class="nav__link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav__item"><a class="nav__link" href="acerca.html">Acerca</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--active" href="styleguide.html">Guía de estilos</a></li>
+            <li class="nav__item"><a class="nav__link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="site-main" role="main">
+      <section class="section" aria-label="Guía visual">
+        <div class="container">
+          <header class="section__header">
+            <h1 class="section__title">Guía de estilos</h1>
+            <p class="section__subtitle">Sistema de diseño base para Te lo Vendo</p>
+          </header>
+
+          <div class="style-block">
+            <h2>Tipografías</h2>
+            <p class="muted">Inter (400, 600, 700)</p>
+            <h1>H1 — Título</h1>
+            <h2>H2 — Subtítulo</h2>
+            <h3>H3 — Sección</h3>
+            <p>Párrafo estándar. <a href="#">Enlace</a>. <strong>Negrita</strong>. <em>Cursiva</em>.</p>
+          </div>
+
+      <div class="style-block">
+            <h2>Colores</h2>
+            <ul class="swatches" role="list">
+        <li class="swatch swatch--primary"><span class="swatch__color"></span><span class="swatch__label">Primario</span></li>
+        <li class="swatch swatch--secondary"><span class="swatch__color"></span><span class="swatch__label">Secundario</span></li>
+        <li class="swatch swatch--text"><span class="swatch__color"></span><span class="swatch__label">Texto</span></li>
+        <li class="swatch swatch--bg"><span class="swatch__color"></span><span class="swatch__label">Fondo</span></li>
+            </ul>
+          </div>
+
+          <div class="style-block">
+            <h2>Botones</h2>
+            <div class="space-x">
+              <a class="btn btn--primary" href="#">Primario</a>
+              <a class="btn btn--secondary" href="#">Secundario</a>
+              <a class="btn btn--ghost" href="#">Ghost</a>
+            </div>
+          </div>
+
+          <div class="style-block">
+            <h2>Tarjetas</h2>
+            <div class="grid grid--cards">
+              <article class="card product-card">
+                <a href="#" class="card__media" aria-label="Abrir producto de ejemplo">
+                  <img src="./assets/img/placeholder.svg" alt="" />
+                </a>
+                <div class="card__body">
+                  <h3 class="card__title"><a href="#">Producto de ejemplo</a></h3>
+                  <p class="card__text">Descripción breve de ejemplo.</p>
+                </div>
+                <footer class="card__footer">
+                  <span class="badge">Categoría</span>
+                  <span class="price">$19.990</span>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">© <span id="year"></span> Te lo Vendo. Todos los derechos reservados.</p>
+        <nav class="site-footer__nav" aria-label="Secundario">
+          <a class="site-footer__link" href="acerca.html">Acerca</a>
+          <a class="site-footer__link" href="styleguide.html">Guía de estilos</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

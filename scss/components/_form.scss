@@ -1,0 +1,16 @@
+.form { display: grid; gap: 1rem;
+  &__row { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  &__actions { display: flex; gap: .75rem; }
+}
+
+.field { display: grid; gap: .35rem;
+  &--full { grid-column: 1 / -1; }
+  &__label { font-weight: 600; }
+  &__input, &__textarea { width: 100%; padding: .6rem .75rem; border-radius: .5rem; border: 1px solid #e5e7eb; font: inherit; }
+  &__input--invalid, &__textarea--invalid { border-color: #fca5a5; background: #fff1f2; }
+  &__error { color: #b91c1c; font-size: .9rem; }
+}
+
+@media (max-width: $break-sm) {
+  .form__row { grid-template-columns: 1fr; }
+}

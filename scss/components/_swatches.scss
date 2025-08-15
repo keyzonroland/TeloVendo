@@ -1,0 +1,9 @@
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; padding: 0; list-style: none; }
+.swatch { display: grid; grid-template-columns: 64px 1fr; align-items: center; gap: .75rem; padding: .5rem; border: 1px solid #e5e7eb; border-radius: .75rem; background: #fff;
+  &__color { width: 64px; height: 40px; border-radius: .5rem; background: var(--sw); border: 1px solid rgba(0,0,0,.08); }
+  &__label { font-weight: 600; }
+  &--primary { --sw: var(--color-primary); }
+  &--secondary { --sw: var(--color-secondary); }
+  &--text { --sw: var(--color-text); }
+  &--bg { --sw: #f3f4f6; }
+}

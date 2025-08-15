@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Te lo Vendo — Ficha de recurso</title>
+    <meta name="description" content="Ficha de producto con descripción breve e imagen de portada" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body class="page page--product">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" role="banner">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">
+          <img class="brand__logo" src="./assets/img/logo.svg" alt="Logo Te lo Vendo" width="40" height="40" />
+          <span class="brand__name">Te lo Vendo</span>
+        </a>
+        <button class="nav__toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Mostrar u ocultar menú">
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav" role="navigation" aria-label="Principal">
+          <ul id="site-menu" class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="index.html">Inicio</a></li>
+            <li class="nav__item"><a class="nav__link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav__item"><a class="nav__link" href="acerca.html">Acerca</a></li>
+            <li class="nav__item"><a class="nav__link" href="styleguide.html">Guía de estilos</a></li>
+            <li class="nav__item"><a class="nav__link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="site-main" role="main">
+      <nav class="breadcrumbs" aria-label="Migas de pan">
+        <div class="container">
+          <a href="index.html" class="breadcrumbs__link">Inicio</a>
+          <span aria-hidden="true">›</span>
+          <a href="catalogo.html" class="breadcrumbs__link">Catálogo</a>
+          <span aria-hidden="true">›</span>
+          <span id="crumb-name" class="breadcrumbs__current" aria-current="page">Producto</span>
+        </div>
+      </nav>
+
+      <section class="section" aria-label="Ficha de recurso">
+        <div class="container">
+          <article id="product" class="product" itemscope itemtype="https://schema.org/Product">
+            <header class="product__header">
+              <h1 id="product-name" class="product__title" itemprop="name">Producto</h1>
+            </header>
+            <div class="product__body">
+              <div class="product__media">
+                <img id="product-image" class="product__image" src="./assets/img/placeholder.svg" alt="Imagen de portada" itemprop="image" width="640" height="360" />
+              </div>
+              <div class="product__info">
+                <p id="product-desc" class="product__desc" itemprop="description">Descripción breve del recurso.</p>
+                <p class="product__meta">
+                  <span class="badge" id="product-category">Categoría</span>
+                  <span id="product-price" class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <meta itemprop="priceCurrency" content="USD" />
+                    <span itemprop="price">$0.00</span>
+                  </span>
+                </p>
+                <div class="product__actions">
+                  <a id="back-to-catalog" class="btn btn--secondary" href="catalogo.html">Volver al catálogo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">© <span id="year"></span> Te lo Vendo. Todos los derechos reservados.</p>
+        <nav class="site-footer__nav" aria-label="Secundario">
+          <a class="site-footer__link" href="acerca.html">Acerca</a>
+          <a class="site-footer__link" href="styleguide.html">Guía de estilos</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/producto.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+// Mixins de ejemplo
+@mixin focus-ring {
+  outline: 2px solid rgba(14,165,233,.35);
+  outline-offset: 2px;
+}

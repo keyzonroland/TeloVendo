@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Te lo Vendo — Contacto</title>
+    <meta name="description" content="Formulario de contacto para Te lo Vendo" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body class="page page--contact">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" role="banner">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html" aria-label="Te lo Vendo, inicio">
+          <img class="brand__logo" src="./assets/img/logo.svg" alt="Logo Te lo Vendo" width="40" height="40" />
+          <span class="brand__name">Te lo Vendo</span>
+        </a>
+        <button class="nav__toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Mostrar u ocultar menú">
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav" role="navigation" aria-label="Principal">
+          <ul id="site-menu" class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="index.html">Inicio</a></li>
+            <li class="nav__item"><a class="nav__link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav__item"><a class="nav__link" href="acerca.html">Acerca</a></li>
+            <li class="nav__item"><a class="nav__link" href="styleguide.html">Guía de estilos</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--active" href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="site-main" role="main">
+      <section class="section" aria-label="Contacto">
+        <div class="container">
+          <header class="section__header">
+            <h1 class="section__title">Contacto</h1>
+            <p class="section__subtitle">¿Tienes preguntas o ideas? Escríbenos.</p>
+          </header>
+
+          <div id="form-alert" class="alert" role="status" aria-live="polite" hidden></div>
+
+          <form id="contact-form" class="form" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="name">Nombre</label>
+                <input class="field__input" type="text" id="name" name="name" required minlength="2" />
+                <p class="field__error" id="err-name" role="alert" hidden>Ingresa tu nombre (mínimo 2 caracteres).</p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="email">Correo electrónico</label>
+                <input class="field__input" type="email" id="email" name="email" required />
+                <p class="field__error" id="err-email" role="alert" hidden>Ingresa un correo válido.</p>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field field--full">
+                <label class="field__label" for="message">Mensaje</label>
+                <textarea class="field__textarea" id="message" name="message" rows="6" required minlength="10"></textarea>
+                <p class="field__error" id="err-message" role="alert" hidden>Cuéntanos con al menos 10 caracteres.</p>
+              </div>
+            </div>
+
+            <div class="form__actions">
+              <button type="submit" class="btn btn--primary">Enviar</button>
+              <button type="reset" class="btn btn--ghost">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">© <span id="year"></span> Te lo Vendo. Todos los derechos reservados.</p>
+        <nav class="site-footer__nav" aria-label="Secundario">
+          <a class="site-footer__link" href="acerca.html">Acerca</a>
+          <a class="site-footer__link" href="styleguide.html">Guía de estilos</a>
+          <a class="site-footer__link" href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/contacto.js"></script>
+  </body>
+</html>

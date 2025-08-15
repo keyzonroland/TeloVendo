@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Te lo Vendo — Acerca del proyecto</title>
+    <meta name="description" content="Objetivos del portal y responsables del proyecto" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body class="page page--about">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" role="banner">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">
+          <img class="brand__logo" src="./assets/img/logo.svg" alt="Logo Te lo Vendo" width="40" height="40" />
+          <span class="brand__name">Te lo Vendo</span>
+        </a>
+        <button class="nav__toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Mostrar u ocultar menú">
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="nav" role="navigation" aria-label="Principal">
+          <ul id="site-menu" class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="index.html">Inicio</a></li>
+            <li class="nav__item"><a class="nav__link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--active" href="acerca.html">Acerca</a></li>
+            <li class="nav__item"><a class="nav__link" href="styleguide.html">Guía de estilos</a></li>
+            <li class="nav__item"><a class="nav__link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="site-main" role="main">
+      <section class="section" aria-label="Acerca del proyecto">
+        <div class="container prose">
+          <h1>Acerca de Te lo Vendo</h1>
+          <p>“Te lo Vendo” es un emprendimiento creado por jóvenes para impulsar la venta de productos en línea. Este sitio es el punto de entrada a un sistema de información que evolucionará con carritos, pagos y más.</p>
+
+          <h2>Objetivos</h2>
+          <ul>
+            <li>Proveer un catálogo claro, accesible y responsivo.</li>
+            <li>Establecer una guía visual reutilizable (tipografía, colores, componentes).</li>
+            <li>Sentar bases técnicas y buenas prácticas para el futuro desarrollo.</li>
+          </ul>
+
+          <h2>Responsables</h2>
+          <ul>
+            <li>Equipo de Front-end: diseño de interfaz, accesibilidad, y arquitectura de componentes.</li>
+            <li>Equipo de Contenido: gestión de descripciones e imágenes.</li>
+            <li>Equipo de Producto: definición de alcance y prioridades.</li>
+          </ul>
+
+          <p>Conoce más en la <a href="styleguide.html">Guía de estilos</a> y en la <a href="docs/decisiones-frontend.md">documentación técnica</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__inner">
+        <p class="site-footer__copy">© <span id="year"></span> Te lo Vendo. Todos los derechos reservados.</p>
+        <nav class="site-footer__nav" aria-label="Secundario">
+          <a class="site-footer__link" href="acerca.html">Acerca</a>
+          <a class="site-footer__link" href="styleguide.html">Guía de estilos</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

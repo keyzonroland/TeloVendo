@@ -1,0 +1,8 @@
+.site-main { padding-block: 1rem 3rem; }
+.section { padding: 2rem 0;
+  &--alt { background: var(--color-surface); }
+  &__header { margin-bottom: 1rem; }
+  &__title { font-size: clamp(1.25rem, 2vw + .5rem, 2rem); }
+  &__subtitle { color: var(--color-muted); margin-top: .25rem; }
+  &__actions { margin-top: 1rem; }
+}

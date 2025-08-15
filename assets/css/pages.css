@@ -1,0 +1,8 @@
+/* Estilos por página */
+.page--home .hero__media img { max-width: 480px; margin-inline: auto; }
+
+.catalog-filters { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1rem; }
+.catalog-filters__group { display: grid; gap: .25rem; }
+.catalog-filters__label { font-weight: 600; }
+
+.page--styleguide .style-block { margin-bottom: 2rem; }

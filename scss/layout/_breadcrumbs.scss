@@ -1,0 +1,4 @@
+.breadcrumbs { background: var(--color-surface); border-bottom: 1px solid #e5e7eb; padding: .5rem 0; font-size: .95rem;
+  &__link { color: var(--color-muted); }
+  &__current { font-weight: 600; }
+}

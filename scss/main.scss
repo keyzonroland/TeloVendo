@@ -1,0 +1,43 @@
+// Manifiesto (7-1) — Te lo Vendo
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Vendors (si aplica)
+@import 'vendors/normalize';
+
+// Base
+@import 'base/base';
+
+// Layout
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/grid';
+@import 'layout/sections';
+@import 'layout/hero';
+@import 'layout/product';
+@import 'layout/breadcrumbs';
+@import 'layout/footer';
+@import 'layout/responsive';
+
+// Components
+@import 'components/buttons';
+@import 'components/card';
+@import 'components/badge';
+@import 'components/input';
+@import 'components/chips';
+@import 'components/category-tile';
+@import 'components/swatches';
+@import 'components/alert';
+@import 'components/form';
+
+// Pages
+@import 'pages/home';
+@import 'pages/catalog';
+@import 'pages/product';
+@import 'pages/about';
+@import 'pages/styleguide';
+@import 'pages/contact';
+
+// Themes (si aplica)
+@import 'themes/default';
