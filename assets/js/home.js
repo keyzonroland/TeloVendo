@@ -22,4 +22,13 @@
       gridCat.appendChild(a);
     });
   }
+
+  // Productos (12 items, 3x4 en escritorio por CSS)
+  var gridProds = document.getElementById('grid-productos');
+  if (gridProds) {
+    var list = PRODUCTS.slice(0, 12);
+    var frag2 = document.createDocumentFragment();
+    list.forEach(function(p){ frag2.appendChild(createProductCard(p)); });
+    gridProds.appendChild(frag2);
+  }
 })();

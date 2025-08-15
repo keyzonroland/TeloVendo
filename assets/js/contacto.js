@@ -27,9 +27,9 @@
     e.preventDefault();
     if (alertBox) { alertBox.hidden = true; alertBox.textContent = ''; }
 
-    var name = form.name;
-    var email = form.email;
-    var message = form.message;
+  var name = form.name;
+  var lastname = form.lastname;
+  var comment = form.comment;
 
     var hasError = false;
 
@@ -41,20 +41,20 @@
       clearError(name, document.getElementById('err-name'));
     }
 
-    // Email
-    if (!email.value || !email.checkValidity()) {
-      setError(email, document.getElementById('err-email'), 'Ingresa un correo válido.');
+    // Apellido
+    if (!lastname.value || lastname.value.trim().length < 2) {
+      setError(lastname, document.getElementById('err-lastname'), 'Ingresa tu apellido (mínimo 2 caracteres).');
       hasError = true;
     } else {
-      clearError(email, document.getElementById('err-email'));
+      clearError(lastname, document.getElementById('err-lastname'));
     }
 
-    // Mensaje
-    if (!message.value || message.value.trim().length < 10) {
-      setError(message, document.getElementById('err-message'), 'Cuéntanos con al menos 10 caracteres.');
+    // Comentario
+    if (!comment.value || comment.value.trim().length < 10) {
+      setError(comment, document.getElementById('err-comment'), 'Escribe al menos 10 caracteres.');
       hasError = true;
     } else {
-      clearError(message, document.getElementById('err-message'));
+      clearError(comment, document.getElementById('err-comment'));
     }
 
     if (hasError) {

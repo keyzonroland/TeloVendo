@@ -2,3 +2,8 @@
 .site-footer__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; padding: 1rem 0; }
 .site-footer__nav { display: inline-flex; gap: 1rem; }
 .site-footer__link { color: var(--color-muted); }
+
+.social { display: inline-flex; gap: .75rem; margin-left: auto; }
+.social__link { color: var(--color-muted); display: inline-flex; align-items: center; }
+.social__link:hover { color: var(--color-text); }
+
