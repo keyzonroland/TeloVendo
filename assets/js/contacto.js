@@ -18,14 +18,15 @@
 
   function showAlert(kind, msg) {
     if (!alertBox) return;
-    alertBox.hidden = false;
-    alertBox.className = 'alert alert--' + kind;
+    alertBox.className = 'alert alert-' + (kind === 'success' ? 'success' : 'danger');
     alertBox.textContent = msg;
+    alertBox.hidden = false;
+    alertBox.classList.remove('d-none');
   }
 
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    if (alertBox) { alertBox.hidden = true; alertBox.textContent = ''; }
+  if (alertBox) { alertBox.classList.add('d-none'); alertBox.hidden = true; alertBox.textContent = ''; }
 
   var name = form.name;
   var lastname = form.lastname;
@@ -63,8 +64,18 @@
       return;
     }
 
-    // Simulación de envío exitoso
-    showAlert('success', '¡Gracias por contactarnos! Te responderemos pronto.');
+    // Simulación de envío exitoso: mostrar modal Bootstrap si está disponible
+    try {
+      var modalEl = document.getElementById('successModal');
+      if (modalEl && window.bootstrap && bootstrap.Modal) {
+        var modal = new bootstrap.Modal(modalEl);
+        modal.show();
+      } else {
+        showAlert('success', 'Guardado exitosamente.');
+      }
+    } catch (err) {
+      showAlert('success', 'Guardado exitosamente.');
+    }
     form.reset();
   });
 })();

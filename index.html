@@ -7,34 +7,33 @@
     <meta name="description" content="Te lo Vendo: novedades y destacados de nuestra tienda en línea." />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body class="page page--home">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
     <header class="site-header" role="banner">
-      <div class="container site-header__inner">
-        <a class="brand" href="index.html" aria-label="Te lo Vendo, inicio">
-          <img class="brand__logo" src="./assets/img/logo.svg" alt="Logo Te lo Vendo" width="40" height="40" />
-          <span class="brand__name">Te lo Vendo</span>
-        </a>
-
-        <button class="nav__toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Mostrar u ocultar menú">
-          <span class="nav__toggle-bar" aria-hidden="true"></span>
-          <span class="nav__toggle-bar" aria-hidden="true"></span>
-          <span class="nav__toggle-bar" aria-hidden="true"></span>
-        </button>
-
-        <nav class="nav" role="navigation" aria-label="Principal">
-          <ul id="site-menu" class="nav__list">
-            <li class="nav__item"><a class="nav__link nav__link--active" href="index.html">Inicio</a></li>
-            <li class="nav__item"><a class="nav__link" href="catalogo.html">Catálogo</a></li>
-            <li class="nav__item"><a class="nav__link" href="acerca.html">Acerca</a></li>
-            <li class="nav__item"><a class="nav__link" href="styleguide.html">Guía de estilos</a></li>
-            <li class="nav__item"><a class="nav__link" href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top" aria-label="Principal">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Te lo Vendo, inicio">
+            <img src="./assets/img/logo.svg" alt="Logo Te lo Vendo" width="32" height="32" class="rounded" />
+            <span class="fw-bold">Te lo Vendo</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-menu" aria-controls="site-menu" aria-expanded="false" aria-label="Alternar navegación">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="site-menu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+              <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca</a></li>
+              <li class="nav-item"><a class="nav-link" href="styleguide.html">Guía de estilos</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main id="contenido" class="site-main" role="main">
@@ -43,13 +42,52 @@
           <div class="hero__copy">
             <h1 class="hero__title">Bienvenido a Te lo Vendo</h1>
             <p class="hero__subtitle">Tu tienda en línea con las mejores novedades. Un punto de entrada para nuestro sistema de información en construcción.</p>
-            <div class="hero__actions">
-              <a class="btn btn--primary" href="catalogo.html">Explorar catálogo</a>
-              <a class="btn btn--ghost" href="acerca.html">Conocer el proyecto</a>
+            <div class="hero__actions d-flex gap-2">
+              <a class="btn btn-primary" href="catalogo.html">Explorar catálogo</a>
+              <a class="btn btn-outline-secondary" href="acerca.html">Conocer el proyecto</a>
             </div>
           </div>
           <div class="hero__media">
-            <img src="./assets/img/hero.svg" alt="Ilustración de compras en línea" width="480" height="320" />
+            <img src="./assets/img/hero..jpeg" alt="Ilustración de compras en línea" width="480" height="320" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Galería de productos">
+        <div class="container">
+          <div id="mainCarousel" class="carousel slide carousel-fixed" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Producto 1"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Producto 2"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Producto 3"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Producto 4"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4" aria-label="Producto 5"></button>
+            </div>
+            <div class="carousel-inner rounded shadow-sm">
+              <div class="carousel-item active h-100">
+                <img src="./assets/img/products/p2-auriculares.jpeg" class="d-block w-100 h-100" alt="Auriculares Inalámbricos" />
+              </div>
+              <div class="carousel-item h-100">
+                <img src="./assets/img/products/chaqueta.jpeg" class="d-block w-100 h-100" alt="Chaqueta Impermeable" loading="lazy" />
+              </div>
+              <div class="carousel-item h-100">
+                <img src="./assets/img/products/set-teclado-mouse.jpg" class="d-block w-100 h-100" alt="Set de Teclado y Mouse" loading="lazy" />
+              </div>
+              <div class="carousel-item h-100">
+                <img src="./assets/img/products/p3-lampara.jpeg" class="d-block w-100 h-100" alt="Lámpara de Escritorio LED" loading="lazy" />
+              </div>
+              <div class="carousel-item h-100">
+                <img src="./assets/img/products/p4-polera.jpeg" class="d-block w-100 h-100" alt="Polera Unisex" loading="lazy" />
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
           </div>
         </div>
       </section>
@@ -60,20 +98,20 @@
             <h2 class="section__title">Novedades</h2>
             <p class="section__subtitle">Últimos productos añadidos a nuestra biblioteca/tienda.</p>
           </header>
-          <div id="grid-novedades" class="grid grid--cards" aria-live="polite"></div>
+          <div id="grid-novedades" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3" aria-live="polite"></div>
           <div class="section__actions">
-            <a class="btn btn--secondary" href="catalogo.html">Ver más</a>
+            <a class="btn btn-success" href="catalogo.html">Ver más</a>
           </div>
         </div>
       </section>
 
-      <section class="section section--alt" aria-label="Productos">
+    <section class="section section--alt" aria-label="Productos">
         <div class="container">
           <header class="section__header">
             <h2 class="section__title">Productos</h2>
             <p class="section__subtitle">Explora una selección de 12 productos.</p>
           </header>
-          <div id="grid-productos" class="grid grid--cards" aria-live="polite"></div>
+      <div id="grid-productos" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3" aria-live="polite"></div>
         </div>
       </section>
 
@@ -108,6 +146,7 @@
       </div>
     </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="./assets/js/data.js"></script>
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/home.js"></script>

@@ -21,20 +21,27 @@ function money(n) {
 }
 
 function createProductCard(p) {
-  var card = document.createElement('article');
-  card.className = 'card product-card';
-  card.innerHTML = [
-    `<a class="card__media" href="producto.html?id=${encodeURIComponent(p.id)}" aria-label="Ver ${p.name}">`,
-    `  <img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async" width="400" height="250" />`,
-    `</a>`,
-    `<div class="card__body">`,
-    `  <h3 class="card__title"><a href="producto.html?id=${encodeURIComponent(p.id)}">${p.name}</a></h3>`,
-    `  <p class="card__text">${p.description}</p>`,
-    `</div>`,
-    `<footer class="card__footer">`,
-    `  <span class="badge">${(CATEGORIES.find(c=>c.slug===p.categorySlug)||{}).name||'General'}</span>`,
-    `  <span class="price">${money(p.price)}</span>`,
-    `</footer>`
+  // Columna Bootstrap que contiene una card
+  var col = document.createElement('div');
+  col.className = 'col';
+
+  var cat = (CATEGORIES.find(function(c){ return c.slug===p.categorySlug; })||{}).name || 'General';
+
+  col.innerHTML = [
+    '<div class="card h-100">',
+    `  <a href="producto.html?id=${encodeURIComponent(p.id)}" aria-label="Ver ${p.name}">`,
+    `    <img class="card-img-top" src="${p.image}" alt="${p.name}" loading="lazy" decoding="async" width="400" height="250" />`,
+    '  </a>',
+    '  <div class="card-body">',
+    `    <h5 class="card-title">${p.name}</h5>`,
+    `    <p class="card-text">${p.description}</p>`,
+    `    <span class="badge text-bg-primary">${cat}</span>`,
+    '  </div>',
+    '  <div class="card-footer d-flex justify-content-between align-items-center">',
+    `    <strong>${money(p.price)}</strong>`,
+    `    <a class="btn btn-sm btn-primary" href="producto.html?id=${encodeURIComponent(p.id)}">Ver</a>`,
+    '  </div>',
+    '</div>'
   ].join('\n');
-  return card;
+  return col;
 }
