@@ -25,7 +25,7 @@ function createProductCard(p) {
   card.className = 'card product-card';
   card.innerHTML = [
     `<a class="card__media" href="producto.html?id=${encodeURIComponent(p.id)}" aria-label="Ver ${p.name}">`,
-    `  <img src="${p.image}" alt="${p.name}" loading="lazy" />`,
+    `  <img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async" width="400" height="250" />`,
     `</a>`,
     `<div class="card__body">`,
     `  <h3 class="card__title"><a href="producto.html?id=${encodeURIComponent(p.id)}">${p.name}</a></h3>`,
